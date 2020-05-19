@@ -14,7 +14,7 @@ Web app template by [DSX](https://deviceswiki.com/wiki/DSX)
 - Code has been changed to follow guidelines for ASP .NET Core 3.1 found in the [documentation.](https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.1&tabs=visual-studio)
   - Changes to Startup
     - ``` .AddMvc() ``` has been deprecated in ASP .NET Core 3.1 and replaced with ``` .AddControllers() ```
-    - ``` .UseMvc() ``` has been deprecated and repalced with ``` .UseRouting() ``` and ``` .UseEndpoints ``` 
+    - ``` .UseMvc() ``` has been deprecated and replaced with ``` .UseRouting() ``` and ``` .UseEndpoints ``` 
   - ``` IHostingEnvironment ``` is obsolete and replaced with ``` IWebHostEnvironment  ```
 
 # Frontend Architecture
