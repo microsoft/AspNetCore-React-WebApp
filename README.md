@@ -1,6 +1,18 @@
 # Overview
 Web app template by [DSX](https://deviceswiki.com/wiki/DSX)
 
+# Updates
+## Backend Architecture
+- Solution has been updated to use and support ASP.NET Core 3.1 
+  - Target frameworks in csproj files have been changed from 2.2 to 3.1.
+  - All unncessary packages have been removed
+  - Relevant packages have been updated to their latest versions
+- Code has been changed to follow guidelines for ASP .NET Core 3.1 found in the [documentation.](https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.1&tabs=visual-studio)
+  - Changes to Startup
+    - ``` .AddMvc() ``` has been deprecated in ASP .NET Core 3.1 and replaced with ``` .AddControllers() ```
+    - ``` .UseMvc() ``` has been deprecated and repalced with ``` .UseRouting() ``` and ``` .UseEndpoints ``` 
+  - ``` IHostingEnvironment ``` is obsolete and replaced with ``` IWebHostEnvironment  ```
+
 # Frontend Architecture
 - React with TypeScript
 - nswag-generated DTOs and client for backend API
@@ -29,7 +41,7 @@ npm start
 
 # Adding an Entity Framework Core migration
 1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
-2. `dotnet ef migrations add <NAME OF MIGRATION>`
+2. `dotnet ef migrations add <NAME OF MIGRATION>`a
 
 # Removing the latest Entity Framework Core migration
 1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
