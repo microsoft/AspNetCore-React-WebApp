@@ -1,5 +1,5 @@
 ﻿{
-  "runtime": "NetCore22",
+  "runtime": "NetCore31",
   "defaultVariables": null,
   "documentGenerator": {
     "aspNetCoreToOpenApi": {
@@ -7,7 +7,7 @@
       "msBuildProjectExtensionsPath": null,
       "configuration": "Debug",
       "runtime": null,
-      "targetFramework": "netcoreapp2.2",
+      "targetFramework": "netcoreapp3.1",
       "noBuild": true,
       "verbose": true,
       "workingDirectory": null,

@@ -11,8 +11,11 @@
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
-    <PackageReference Include="NSwag.AspNetCore" Version="13.0.4" />
-	<PackageReference Include="NSwag.MSBuild" Version="13.0.4" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.5.0" />
+	<PackageReference Include="NSwag.MSBuild" Version="13.5.0">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.4" />
 	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.4" />
   </ItemGroup>
@@ -24,10 +27,8 @@
 
   <!-- https://github.com/RicoSuter/NSwag/wiki/Assembly-loading#net-core -->
   <!-- build TypeScript client and DTOs for this backend -->
-  <Target Name="NSwag" AfterTargets="Build">
-    <Copy SourceFiles="@(Reference)" DestinationFolder="$(OutDir)References" />
-    <Exec Command="$(NSwagExe_Core22) run nswag.json /variables:OutDir=$(OutDir)" />
-    <RemoveDir Directories="$(OutDir)References" />
-  </Target>
+    <Target Name="NSwag" AfterTargets="Build">
+	    <Exec Command="$(NSwagExe_Core31) run nswag.json /variables:Configuration=$(Configuration)" />
+    </Target>
 
 </Project>
