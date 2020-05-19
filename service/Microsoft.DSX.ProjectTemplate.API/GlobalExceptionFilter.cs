@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.DSX.ProjectTemplate.Data.DTOs;
 using Microsoft.DSX.ProjectTemplate.Data.Exceptions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
 using System;
 
 namespace Microsoft.DSX.ProjectTemplate.API
@@ -15,13 +16,13 @@ namespace Microsoft.DSX.ProjectTemplate.API
     /// <remarks>https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters#exception-filters</remarks>
     public class GlobalExceptionFilter : IExceptionFilter
     {
-        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly IWebHostEnvironment _hostingEnvironment;
         private readonly ILogger<GlobalExceptionFilter> _logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalExceptionFilter"/> class.
         /// </summary>
-        public GlobalExceptionFilter(IHostingEnvironment hostingEnvironment, ILogger<GlobalExceptionFilter> logger)
+        public GlobalExceptionFilter(IWebHostEnvironment hostingEnvironment, ILogger<GlobalExceptionFilter> logger)
         {
             _hostingEnvironment = hostingEnvironment;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));

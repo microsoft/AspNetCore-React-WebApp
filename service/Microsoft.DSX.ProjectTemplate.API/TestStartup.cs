@@ -5,12 +5,13 @@ using Microsoft.DSX.ProjectTemplate.Data.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Microsoft.DSX.ProjectTemplate.API
 {
     public class TestStartup : Startup
     {
-        public TestStartup(IConfiguration configuration, IHostingEnvironment hostingEnvironment)
+        public TestStartup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
             : base(configuration, hostingEnvironment)
         {
         }
@@ -25,7 +26,7 @@ namespace Microsoft.DSX.ProjectTemplate.API
                 .AddTransient<TestDataSeeder>();
         }
 
-        public override void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             // perform all configuration in the normal startup
             base.Configure(app, env);
