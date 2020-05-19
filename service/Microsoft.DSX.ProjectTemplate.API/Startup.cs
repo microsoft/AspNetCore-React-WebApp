@@ -11,7 +11,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NSwag.AspNetCore;
 
 [assembly: ApiConventionType(typeof(DefaultApiConventions))]
 namespace Microsoft.DSX.ProjectTemplate.API
@@ -41,7 +40,7 @@ namespace Microsoft.DSX.ProjectTemplate.API
                         builder => builder.AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader());
-                        //.AllowCredentials());
+                    //.AllowCredentials());
                 })
                 .AddControllers()
                 .AddNewtonsoftJson();

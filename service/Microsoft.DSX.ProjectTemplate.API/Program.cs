@@ -14,7 +14,7 @@ namespace Microsoft.DSX.ProjectTemplate.API
        
         public static void Main(string[] args)
         {
-            
+            /*
             var host = CreateHostBuilder(args).Build();
             var logger = host.Services.GetRequiredService<ILogger<Program>>();
 
@@ -27,9 +27,8 @@ namespace Microsoft.DSX.ProjectTemplate.API
                 logger.LogCritical(ex, ex.Message);
                 throw;
             }
+            */
             
-
-            /*
             var webHost = CreateWebHostBuilder(args).Build();
             var logger = webHost.Services.GetRequiredService<ILogger<Program>>();
 
@@ -43,26 +42,29 @@ namespace Microsoft.DSX.ProjectTemplate.API
                 logger.LogCritical(ex, ex.Message);
                 throw;
             }
-            */
+           
         }
 
-        
+        /*
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.ConfigureKestrel(serverOptions =>
+                    {
+                    });
                     webBuilder.UseStartup<Startup>();
                 });
         
+        
+        */
 
-        /*
+        
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                     .UseStartup<Startup>();
 
-        */
-
-        private static void RunDatabaseMigrations(IHost host, ILogger logger)
+        private static void RunDatabaseMigrations(IWebHost host, ILogger logger)
         {
             logger.LogInformation($"Running database migrations");
             using (var serviceScope = host.Services.CreateScope())
