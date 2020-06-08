@@ -17,7 +17,7 @@ namespace Microsoft.DSX.ProjectTemplate.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
+        public Startup(IConfiguration configuration, IHostEnvironment hostingEnvironment)
         {
             Configuration = configuration;
             HostingEnvironment = hostingEnvironment;
@@ -26,7 +26,7 @@ namespace Microsoft.DSX.ProjectTemplate.API
         readonly string CorsPolicy = "CorsPolicy";
 
         public IConfiguration Configuration { get; }
-        public IWebHostEnvironment HostingEnvironment { get; }
+        public IHostEnvironment HostingEnvironment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -40,10 +40,8 @@ namespace Microsoft.DSX.ProjectTemplate.API
                         builder => builder.AllowAnyOrigin()
                         .AllowAnyMethod()
                         .AllowAnyHeader());
-                    //.AllowCredentials());
                 })
-                .AddControllers()
-                .AddNewtonsoftJson();
+                .AddControllers();
 
             // Register Entity Framework Core
             ConfigureDatabase(services);

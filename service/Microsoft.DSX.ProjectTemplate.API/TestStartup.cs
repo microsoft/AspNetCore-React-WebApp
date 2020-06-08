@@ -5,12 +5,13 @@ using Microsoft.DSX.ProjectTemplate.Data.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Microsoft.DSX.ProjectTemplate.API
 {
     public class TestStartup : Startup
     {
-        public TestStartup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment)
+        public TestStartup(IConfiguration configuration, IHostEnvironment hostingEnvironment)
             : base(configuration, hostingEnvironment)
         {
         }

@@ -16,13 +16,13 @@ namespace Microsoft.DSX.ProjectTemplate.API
     /// <remarks>https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters#exception-filters</remarks>
     public class GlobalExceptionFilter : IExceptionFilter
     {
-        private readonly IWebHostEnvironment _hostingEnvironment;
+        private readonly IHostEnvironment _hostingEnvironment;
         private readonly ILogger<GlobalExceptionFilter> _logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="GlobalExceptionFilter"/> class.
         /// </summary>
-        public GlobalExceptionFilter(IWebHostEnvironment hostingEnvironment, ILogger<GlobalExceptionFilter> logger)
+        public GlobalExceptionFilter(IHostEnvironment hostingEnvironment, ILogger<GlobalExceptionFilter> logger)
         {
             _hostingEnvironment = hostingEnvironment;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
