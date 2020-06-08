@@ -1,11 +1,11 @@
 # Overview
-Web app template by [DSX](https://deviceswiki.com/wiki/DSX)
+Web app template by the Microsoft Devices Software Experiences team.
 
 # Updates
 ## Backend Architecture
 - Solution has been updated to use and support ASP.NET Core 3.1 
   - Target frameworks in csproj files have been changed from 2.2 to 3.1.
-  - All unncessary packages have been removed
+  - All unnecessary packages have been removed
   - Relevant packages have been updated to their latest versions
     - Entity Framework Packages have been changed to 3.1.4
     - NSwag has been updated to 13.5.0
@@ -15,7 +15,7 @@ Web app template by [DSX](https://deviceswiki.com/wiki/DSX)
   - Changes to Startup
     - ``` .AddMvc() ``` has been deprecated in ASP .NET Core 3.1 and replaced with ``` .AddControllers() ```
     - ``` .UseMvc() ``` has been deprecated and replaced with ``` .UseRouting() ``` and ``` .UseEndpoints() ``` 
-  - ``` IHostingEnvironment ``` is obsolete and replaced with ``` IWebHostEnvironment  ```
+  - ``` IHostingEnvironment ``` is obsolete and replaced with ``` IHostEnvironment  ```
 
 # Frontend Architecture
 - React with TypeScript
