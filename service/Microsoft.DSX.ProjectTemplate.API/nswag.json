@@ -5,7 +5,7 @@
     "aspNetCoreToOpenApi": {
       "project": "Microsoft.DSX.ProjectTemplate.API.csproj",
       "msBuildProjectExtensionsPath": null,
-      "configuration": "Debug",
+      "configuration": "$(Configuration)",
       "runtime": null,
       "targetFramework": "netcoreapp3.1",
       "noBuild": true,
