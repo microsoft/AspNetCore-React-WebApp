@@ -45,7 +45,7 @@ npm start
 
 # Adding an Entity Framework Core migration
 1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
-2. `dotnet ef migrations add <NAME OF MIGRATION>`a
+2. `dotnet ef migrations add <NAME OF MIGRATION>`
 
 # Removing the latest Entity Framework Core migration
 1. Open a command prompt in the **Microsoft.DSX.ProjectTemplate.Data** folder.
