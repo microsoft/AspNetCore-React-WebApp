@@ -22,7 +22,7 @@ jobs:
       run: dotnet restore
     - name: Build
       working-directory: service
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build ../../service/Microsoft.DSX.ProjectTemplate.API/Microsoft.DSX.ProjectTemplate.API.csproj --configuration Release --no-restore
     - name: Test
       working-directory: service
       run: dotnet test --no-restore --verbosity normal
