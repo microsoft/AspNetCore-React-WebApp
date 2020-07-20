@@ -6,9 +6,9 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Exceptions
     {
         private static string DefaultMessageHeader => "Bad Request";
 
+        public override HttpStatusCode StatusCode => HttpStatusCode.BadRequest;
+
         public BadRequestException(string message, string messageHeader = null)
             : base(message, messageHeader ?? DefaultMessageHeader) { }
-
-        public override HttpStatusCode StatusCode => HttpStatusCode.BadRequest;
     }
 }

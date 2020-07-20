@@ -16,13 +16,13 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationAddressLine1 = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationAddressLine2 = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationCity = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationStateProvince = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationZipCode = table.Column<string>(maxLength: 512, nullable: true),
-                    Address_LocationCountry = table.Column<string>(maxLength: 512, nullable: true)
+                    Name = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationAddressLine1 = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationAddressLine2 = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationCity = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationStateProvince = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationZipCode = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
+                    Address_LocationCountry = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -37,7 +37,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false),
-                    DisplayName = table.Column<string>(maxLength: 512, nullable: true),
+                    DisplayName = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
                     Metadata = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -53,7 +53,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(maxLength: 512, nullable: false),
+                    Name = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     DefaultLibraryId = table.Column<int>(nullable: true)
                 },
@@ -76,7 +76,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(maxLength: 512, nullable: false),
+                    Name = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     GroupId = table.Column<int>(nullable: false),
                     OwnerId = table.Column<int>(nullable: true)
@@ -106,7 +106,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreatedDate = table.Column<DateTime>(nullable: false),
                     UpdatedDate = table.Column<DateTime>(nullable: false),
-                    Name = table.Column<string>(maxLength: 512, nullable: true),
+                    Name = table.Column<string>(maxLength: Constants.MaximumLengths.StringColumn, nullable: true),
                     GroupId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

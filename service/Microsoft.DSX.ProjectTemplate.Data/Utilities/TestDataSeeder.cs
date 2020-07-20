@@ -15,13 +15,13 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Utilities
 
         public void SeedTestData()
         {
-            _logger.LogInformation("Database seeding started");
+            _logger.LogInformation("Database seeding started.");
 
             SeedGroups(10);
 
             SeedProjects(10);
 
-            _logger.LogInformation("Database seeding completed");
+            _logger.LogInformation("Database seeding completed.");
         }
 
         private void SeedGroups(int entityCount)

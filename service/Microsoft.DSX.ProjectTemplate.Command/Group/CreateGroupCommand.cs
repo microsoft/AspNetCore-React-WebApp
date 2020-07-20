@@ -30,23 +30,13 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
 
         public async Task<GroupDto> Handle(CreateGroupCommand request, CancellationToken cancellationToken)
         {
-            if (request.Group == null)
-            {
-                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} must be provided");
-            }
-
-            if (!request.Group.IsValid())
-            {
-                throw new BadRequestException(request.Group.GetValidationErrors());
-            }
-
             var dto = request.Group;
 
             bool nameAlreadyUsed = await Database.Groups
                 .AnyAsync(e => e.Name.Trim() == dto.Name.Trim());
             if (nameAlreadyUsed)
             {
-                throw new BadRequestException($"{nameof(dto.Name)} '{dto.Name}' already used");
+                throw new BadRequestException($"{nameof(dto.Name)} '{dto.Name}' already used.");
             }
 
             var model = new Data.Models.Group()

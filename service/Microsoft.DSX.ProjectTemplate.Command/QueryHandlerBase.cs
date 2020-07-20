@@ -6,7 +6,7 @@ using Microsoft.DSX.ProjectTemplate.Data;
 namespace Microsoft.DSX.ProjectTemplate.Command
 {
     /// <summary>
-	/// Base class that all query handlers inherit from
+	/// Base class of all query handlers.
 	/// </summary>
     public abstract class QueryHandlerBase : HandlerBase
     {

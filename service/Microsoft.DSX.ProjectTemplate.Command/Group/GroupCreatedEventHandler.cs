@@ -34,11 +34,11 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
             // As a subscriber, we run on the thread pool so we need to handle our own failures appropriately.
             try
             {
-                await _emailService.SendEmailAsync("a@microsoft.com", "b@microsoft.com", $"New group '{notification.Group.Name}' was created", "lorem ipsum");
+                await _emailService.SendEmailAsync("a@microsoft.com", "b@microsoft.com", $"New group '{notification.Group.Name}' was created.", "lorem ipsum");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Failed to send email");
+                _logger.LogError(ex, "Failed to send email.");
             }
         }
     }

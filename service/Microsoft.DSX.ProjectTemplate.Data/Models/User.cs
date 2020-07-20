@@ -5,7 +5,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Models
 {
     public class User : AuditModel<int>
     {
-        [MaxLength(512)]
+        [MaxLength(Constants.MaximumLengths.StringColumn)]
         public string DisplayName { get; set; }
 
         public Dictionary<string, string> Metadata { get; set; }

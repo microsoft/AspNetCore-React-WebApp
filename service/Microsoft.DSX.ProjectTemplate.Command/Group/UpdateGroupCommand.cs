@@ -30,16 +30,6 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
 
         public async Task<GroupDto> Handle(UpdateGroupCommand request, CancellationToken cancellationToken)
         {
-            if (request.Group == null)
-            {
-                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} object must be provided");
-            }
-
-            if (!request.Group.IsValid())
-            {
-                throw new BadRequestException(request.Group.GetValidationErrors());
-            }
-
             var dto = request.Group;
 
             if (dto.Id <= 0)
@@ -53,7 +43,7 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
 
             if (model == null)
             {
-                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} with Id {dto.Id} not found");
+                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} with Id {dto.Id} not found.");
             }
 
             // ensure uniqueness of name
@@ -61,7 +51,7 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
                 .AnyAsync(e => e.Name.Trim() == dto.Name.Trim()) && dto.Name != (model.Name);
             if (nameAlreadyUsed)
             {
-                throw new BadRequestException($"{nameof(dto.Name)} {dto.Name} already used");
+                throw new BadRequestException($"{nameof(dto.Name)} {dto.Name} already used.");
             }
 
             model.Name = dto.Name;

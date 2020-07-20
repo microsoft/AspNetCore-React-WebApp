@@ -6,9 +6,9 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Exceptions
     {
         private static string DefaultMessageHeader => "Not found";
 
+        public override HttpStatusCode StatusCode => HttpStatusCode.NotFound;
+
         public EntityNotFoundException(string message, string messageHeader = null)
             : base(message, messageHeader ?? DefaultMessageHeader) { }
-
-        public override HttpStatusCode StatusCode => HttpStatusCode.NotFound;
     }
 }

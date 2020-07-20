@@ -6,7 +6,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Models
     public class Group : AuditModel<int>
     {
         [Required]
-        [MaxLength(512)]
+        [MaxLength(Constants.MaximumLengths.StringColumn)]
         public string Name { get; set; }
 
         public bool IsActive { get; set; }

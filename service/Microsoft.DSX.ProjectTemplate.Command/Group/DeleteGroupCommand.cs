@@ -30,14 +30,14 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
         {
             if (request.GroupId <= 0)
             {
-                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} Id must be provided");
+                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} Id must be provided.");
             }
 
             var group = await Database.Groups.FindAsync(request.GroupId);
 
             if (group == null)
             {
-                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} not found");
+                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} not found.");
             }
 
             Database.Groups.Remove(group);

@@ -16,10 +16,10 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace Microsoft.DSX.ProjectTemplate.Test
+namespace Microsoft.DSX.ProjectTemplate.Test.Tests.Unit
 {
     [TestCategory("Unit")]
-    public abstract class UnitTest : BaseTest
+    public abstract class BaseUnitTest : BaseTest
     {
         protected ILoggerFactory LoggerFactory { get; set; }
 
@@ -31,7 +31,7 @@ namespace Microsoft.DSX.ProjectTemplate.Test
 
         protected Mock<IEmailService> MockEmailService { get; set; } = new Mock<IEmailService>();
 
-        protected UnitTest()
+        protected BaseUnitTest()
         {
             // redirect all logging to console
             var services = new ServiceCollection();

@@ -45,7 +45,7 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
         {
             if (request.GroupId <= 0)
             {
-                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} Id must be provided");
+                throw new BadRequestException($"A valid {nameof(Data.Models.Group)} Id must be provided.");
             }
 
             var innerResult = await Database.Groups
@@ -53,7 +53,7 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Group
 
             if (innerResult == null)
             {
-                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} with Id {request.GroupId} cannot be found");
+                throw new EntityNotFoundException($"{nameof(Data.Models.Group)} with Id {request.GroupId} cannot be found.");
             }
 
             return Mapper.Map<GroupDto>(innerResult);

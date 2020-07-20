@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 
 [assembly: Parallelize(Workers = 0, Scope = ExecutionScope.MethodLevel)]
-namespace Microsoft.DSX.ProjectTemplate.Test
+namespace Microsoft.DSX.ProjectTemplate.Test.Tests
 {
     public abstract class BaseTest
     {

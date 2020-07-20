@@ -6,7 +6,7 @@ using Microsoft.DSX.ProjectTemplate.Data;
 namespace Microsoft.DSX.ProjectTemplate.Command
 {
     /// <summary>
-	/// Base class that all command handlers inherit from
+	/// Base class of all command handlers.
 	/// </summary>
     public abstract class CommandHandlerBase : HandlerBase
     {

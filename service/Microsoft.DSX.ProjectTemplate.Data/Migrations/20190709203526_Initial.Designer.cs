@@ -35,7 +35,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(512);
+                        .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                     b.Property<DateTime>("UpdatedDate");
 
@@ -84,7 +84,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(512);
+                        .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                     b.Property<DateTime>("UpdatedDate");
 
@@ -111,7 +111,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(512);
+                        .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                     b.Property<int?>("OwnerId");
 
@@ -140,7 +140,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                     b.Property<int>("GroupId");
 
                     b.Property<string>("Name")
-                        .HasMaxLength(512);
+                        .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                     b.Property<DateTime>("UpdatedDate");
 
@@ -160,7 +160,7 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                     b.Property<DateTime>("CreatedDate");
 
                     b.Property<string>("DisplayName")
-                        .HasMaxLength(512);
+                        .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                     b.Property<string>("Metadata");
 
@@ -187,22 +187,22 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<string>("LocationAddressLine1")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.Property<string>("LocationAddressLine2")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.Property<string>("LocationCity")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.Property<string>("LocationCountry")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.Property<string>("LocationStateProvince")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.Property<string>("LocationZipCode")
-                                .HasMaxLength(512);
+                                .HasMaxLength(Constants.MaximumLengths.StringColumn);
 
                             b1.HasKey("LibraryId");
 

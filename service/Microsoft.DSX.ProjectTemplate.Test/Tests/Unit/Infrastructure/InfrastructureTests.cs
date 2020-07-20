@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Threading.Tasks;
 
-namespace Microsoft.DSX.ProjectTemplate.Test.Infrastructure
+namespace Microsoft.DSX.ProjectTemplate.Test.Tests.Unit.Infrastructure
 {
     [TestClass]
-    public class InfrastructureTests : UnitTest
+    [TestCategory("Infrastructure")]
+    public class InfrastructureTests : BaseUnitTest
     {
         [TestMethod]
         public async Task Infrastructure_AutoMapper_ConfigurationIsValid()
