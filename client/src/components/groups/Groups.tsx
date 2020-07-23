@@ -6,7 +6,7 @@ import {
   DetailsList,
   DetailsListLayoutMode,
   SpinnerSize
-} from 'office-ui-fabric-react';
+} from '@fluentui/react';
 import { IGroupDto, ApiClient } from '../../generated/backend';
 
 const Groups: React.FC = () => {
