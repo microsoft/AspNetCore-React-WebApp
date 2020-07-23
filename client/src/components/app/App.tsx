@@ -1,8 +1,6 @@
-import 'office-ui-fabric-core/dist/css/fabric.css';
+import 'office-ui-fabric-react/dist/css/fabric.css';
 
-import { FluentCustomizations } from '@uifabric/fluent-theme';
 import {
-  Customizer,
   IButtonProps,
   Icon,
   Image,
@@ -24,7 +22,7 @@ initializeIcons();
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Customizer {...FluentCustomizations}>
+      <React.Fragment>
         <div className="ms-Grid" dir="ltr">
           <div className="ms-Grid-row">
             <div className={styles.header}>
@@ -66,7 +64,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </Customizer>
+      </React.Fragment>
     </BrowserRouter>
   );
 };
