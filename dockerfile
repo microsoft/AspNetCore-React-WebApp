@@ -1,5 +1,5 @@
 # to build local image from PowerShell (e.g. when you're authoring this dockerfile):
-# docker build -f .\dockerfile . --build-arg PAT=full_access_Azure_DevOps_PAT --build-arg BUILDCONFIG=dev
+# docker build -f .\dockerfile . --build-arg BUILDCONFIG=dev
 
 # build backend
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS serviceBuild
