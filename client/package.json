@@ -44,6 +44,10 @@
         ]
     },
     "jest": {
+        "moduleDirectories": [
+            "node_modules",
+            "src"
+        ],
         "collectCoverageFrom": [
             "src/**/*.{js,jsx,ts,tsx}",
             "!src/**/*.d.ts"
@@ -97,6 +101,7 @@
     "devDependencies": {
         "@babel/core": "7.11.6",
         "@svgr/webpack": "5.4.0",
+        "@testing-library/react": "^11.1.0",
         "@types/jest": "26.0.13",
         "@types/node": "14.6.4",
         "@types/node-fetch": "^2.5.7",
