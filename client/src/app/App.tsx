@@ -6,7 +6,6 @@ import Groups from 'app/pages/groups/Groups';
 import Home from 'app/pages/home/Home';
 import msftLogo from 'app/static/msftLogo.png';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 import * as serviceWorker from '../serviceWorker';
@@ -77,7 +76,7 @@ const onRenderLink = (props: IButtonProps) => {
     );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
