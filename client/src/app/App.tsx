@@ -46,7 +46,12 @@ const App: React.FC = () => {
                                                 name: 'Groups',
                                                 url: '/groups',
                                                 key: 'groups'
-                                            }
+                                            },
+                                            {
+                                                name: 'Library',
+                                                url: '/library',
+                                                key: 'library'
+                                            },
                                         ]
                                     }
                                 ]}
