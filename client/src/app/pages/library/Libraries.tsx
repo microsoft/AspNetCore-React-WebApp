@@ -1,8 +1,11 @@
 import { DetailsList, DetailsListLayoutMode, IColumn, Spinner, SpinnerSize } from '@fluentui/react';
 import { ApiClient, ILibraryDto } from 'app/generated/backend';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+import { IButtonProps, Icon, Image, initializeIcons, Nav, Text } from '@fluentui/react';
 import React, { useEffect, useState } from 'react';
 import Form from '../../components/Form';
+import { render } from 'react-dom';
+import { Router, RouteComponentProps, navigate } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 const Libraries: React.FC = () => {
     const [data, setData] = useState({
@@ -28,9 +31,12 @@ const Libraries: React.FC = () => {
         (key): IColumn => {
             return {
                 key,
-                name: key.replaceAll('address_', '').replace(/([A-Z])/g, ' $1').replace(/^./, (str: string) => {
-                    return str.toUpperCase();
-                }),
+                name: key
+                    .replaceAll('address_', '')
+                    .replace(/([A-Z])/g, ' $1')
+                    .replace(/^./, (str: string) => {
+                        return str.toUpperCase();
+                    }),
                 fieldName: key,
                 minWidth: 100,
                 maxWidth: 200,
@@ -56,7 +62,7 @@ const Libraries: React.FC = () => {
     }, []);
 
     return (
-        <>
+        <div>
             <h2>Libraries</h2>
             <DetailsList
                 items={data.libraries.map((library) => {
@@ -70,9 +76,10 @@ const Libraries: React.FC = () => {
                 layoutMode={DetailsListLayoutMode.justified}
             />
             {data.isFetching && <Spinner size={SpinnerSize.large} />}
-            <Link to="/Form">Add</Link>
-            
-        </>
+            <button type="submit" className="btn btn-light" >
+            <Link to="/library_form">Add</Link>
+            </button> 
+        </div>
     );
 };
 

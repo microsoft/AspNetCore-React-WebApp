@@ -11,6 +11,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import * as serviceWorker from '../serviceWorker';
 import styles from './App.module.scss';
 import Libraries from './pages/library/Libraries';
+import Form from './components/Form';
 
 initializeIcons();
 
@@ -64,6 +65,7 @@ const App: React.FC = () => {
                             <Route path="/about" component={About} />
                             <Route path="/groups" component={Groups} />
                             <Route path="/libraries" component={Libraries} />
+                            <Route path="/library_form" component={Form} />
                         </div>
                     </div>
                 </div>

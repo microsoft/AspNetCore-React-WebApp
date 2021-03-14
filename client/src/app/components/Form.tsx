@@ -1,5 +1,8 @@
 import React, { MouseEvent, useState } from 'react';
 import { ApiClient, ILibraryDto, LibraryDto } from 'app/generated/backend';
+import { navigate } from '@reach/router';
+import { Link } from 'react-router-dom';
+
 
 const Form: React.FC = () => {
     const [library, setLibrary] = useState({
@@ -41,6 +44,7 @@ const Form: React.FC = () => {
             address_ZipCode: '',
             address_Country: ''
         });
+        
     };
     return (
         <>
@@ -128,10 +132,12 @@ const Form: React.FC = () => {
                     required
                 />
             </div>
-            <button type="submit" onClick={onSubmitHandler}>
-                Save
-            </button>
-        </>
+
+            <button type="submit" className="btn btn-light"  onClick={onSubmitHandler}> <Link to="/libraries">Save</Link> 
+         </button>
+
+            
+            </>
     );
 };
 
