@@ -41,13 +41,15 @@ namespace Microsoft.DSX.ProjectTemplate.Command.Library
 
             var model = new Data.Models.Library()
             {
-                Name = dto.Name
-                //Address_AddressLine1 = dto.Address_AddressLine1,
-                //Address_AddressLine2 = dto.Address_AddressLine2,
-                //Address_City = dto.Address_City,
-                //Address_StateProvince = dto.Address_StateProvince,
-                //Address_ZipCode = dto.Address_ZipCode,
-                //Address_Country = dto.Address_Country,
+                Name = dto.Name,
+                Address = new Data.Models.Address() {
+                    AddressLine1 = dto.Address_AddressLine1,
+                    AddressLine2 = dto.Address_AddressLine2,
+                    City = dto.Address_City,
+                    StateProvince = dto.Address_StateProvince,
+                    ZipCode = dto.Address_ZipCode,
+                    Country = dto.Address_Country
+                }
             };
 
             Database.Libraries.Add(model);
