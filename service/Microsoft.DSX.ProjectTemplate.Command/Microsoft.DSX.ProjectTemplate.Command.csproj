@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net50</TargetFramework>
     <LangVersion>8.0</LangVersion>
     <Authors>Devices Software Experiences</Authors>
     <Company>Microsoft</Company>

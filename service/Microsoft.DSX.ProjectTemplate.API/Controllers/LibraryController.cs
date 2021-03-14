@@ -21,5 +21,12 @@ namespace Microsoft.DSX.ProjectTemplate.API.Controllers
         {
             return Ok(await Mediator.Send(new GetAllLibrariesQuery()));
         }
+
+        //CreateLibrary
+        [HttpPost]
+        public async Task<ActionResult<LibraryDto>> CreateLibrary([FromBody] LibraryDto dto)
+        {
+            return Ok(await Mediator.Send(new CreateLibraryCommand() { Library = dto }));
+        }
     }
 }
