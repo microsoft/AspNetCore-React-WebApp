@@ -3,8 +3,6 @@ import { ApiClient, ILibraryDto, LibraryDto } from 'app/generated/backend';
 
 import { Link } from 'react-router-dom';
 
-
-
 const Form: React.FC = () => {
     const [library, setLibrary] = useState({
         name: '',
@@ -45,7 +43,6 @@ const Form: React.FC = () => {
             address_ZipCode: '',
             address_Country: ''
         });
-        
     };
     return (
         <>
@@ -60,7 +57,6 @@ const Form: React.FC = () => {
                     placeholder="Name"
                     required
                 />
-              
             </div>
             <div className="form-floating mb-3 ">
                 <input
@@ -135,11 +131,10 @@ const Form: React.FC = () => {
                 />
             </div>
 
-            <button type="submit" className="btn btn-light"  onClick={onSubmitHandler}> <Link to="/libraries">Save</Link> 
-         </button>
-
-            
-            </>
+            <button type="submit" className="btn btn-light" onClick={onSubmitHandler}>
+                <Link to="/libraries">Save</Link>
+            </button>
+        </>
     );
 };
 

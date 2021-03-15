@@ -134,6 +134,11 @@ namespace Microsoft.DSX.ProjectTemplate.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "DefaultLibraryId", "IsActive", "Name", "UpdatedDate" },
                 values: new object[] { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, true, "Xbox", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
+            migrationBuilder.InsertData(
+                table: "Libraries",
+                columns: new[] { "Id", "CreatedDate", "DefaultLibraryId", "Name", "UpdatedDate" },
+                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Library1", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Groups_DefaultLibraryId",
                 table: "Groups",

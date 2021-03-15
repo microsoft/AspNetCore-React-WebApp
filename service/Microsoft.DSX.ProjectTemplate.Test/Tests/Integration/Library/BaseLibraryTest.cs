@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.DSX.ProjectTemplate.Data.DTOs;
+using Microsoft.DSX.ProjectTemplate.Data.Utilities;
 
 namespace Microsoft.DSX.ProjectTemplate.Test.Tests.Integration.Library
 {
-    class BaseLibraryTest
+    public abstract class BaseLibraryTest : BaseIntegrationTest
     {
+        protected static LibraryDto GetLibraryDto()
+        {
+            return new LibraryDto()
+            {
+                Name = RandomFactory.GetCompanyName(),
+                
+
+            };
+        }
     }
 }
