@@ -21,6 +21,7 @@ Web app template by the Microsoft Devices Software Experiences team.
 # How to run locally
 
 1. [Download and install the .NET Core SDK](https://dotnet.microsoft.com/download)
+    * Currently requires [ASP.NET Core 5.0 Runtime (v5.0.17)](https://download.visualstudio.microsoft.com/download/pr/05726c49-3a3d-4862-9ff8-0660d9dc3c52/71c295f9287faad89e2d3233a38b44fb/dotnet-hosting-5.0.17-win.exe) 
     * If you don't have `localdb` available on your system, [Download and install SQL Server Express](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-express-localdb)
     * NOTE: We will remove the `localdb` requirement in a future PR
 2. Open a terminal such as **PowerShell**, **Command Prompt**, or **bash** and navigate to the `service` folder
