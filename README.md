@@ -12,7 +12,7 @@ Web app template by the Microsoft Devices Software Experiences team.
 
 # Service (back-end)
 
-- [ASP.NET Core 3.1](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
+- [.NET 6.0](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [MediatR](https://github.com/jbogard/MediatR) as [CQRS](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs) implementation
 - [AutoMapper](https://github.com/AutoMapper/AutoMapper) handling Entity-to-DTO mapping
 - Unit and integration tests using [Moq](https://github.com/moq/moq4) and [MSTest](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest)
@@ -52,7 +52,7 @@ npm start
 
 1. Migrate to MSAL.js
 2. Include Authentication and Authorization logic
-3. Add Docker file
+3. Update dockerfile
 4. Move away from localdb
 5. Create a CLI setup wizard
 
