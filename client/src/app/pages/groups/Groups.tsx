@@ -9,27 +9,25 @@ const Groups: React.FC = () => {
     });
 
     const groupKeys: IGroupDto = {
-        id: null,
+        id: 0,
         name: '',
         isActive: false,
-        createdDate: null,
-        updatedDate: null
+        createdDate: new Date(),
+        updatedDate: new Date()
     };
 
-    const columns = Object.keys(groupKeys).map(
-        (key): IColumn => {
-            return {
-                key,
-                name: key.replace(/([A-Z])/g, ' $1').replace(/^./, (str: string) => {
-                    return str.toUpperCase();
-                }),
-                fieldName: key,
-                minWidth: 100,
-                maxWidth: 200,
-                isResizable: true
-            };
-        }
-    );
+    const columns = Object.keys(groupKeys).map((key): IColumn => {
+        return {
+            key,
+            name: key.replace(/([A-Z])/g, ' $1').replace(/^./, (str: string) => {
+                return str.toUpperCase();
+            }),
+            fieldName: key,
+            minWidth: 100,
+            maxWidth: 200,
+            isResizable: true
+        };
+    });
 
     useEffect(() => {
         const fetchData = async () => {
