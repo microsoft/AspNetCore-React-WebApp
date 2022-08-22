@@ -1,0 +1,30 @@
+name: backend
+on: workflow_dispatch
+jobs: 
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    defaults: 
+      run: 
+        shell: pwsh
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v2.1.0  
+
+      - name: dotnetbuild
+        run: |
+          cd .\service\Microsoft.DSX.ProjectTemplate.API
+          dotnet build --configuration release
+
+      - name: dotnetpublish
+        run: dotnet publish --no-build --configuration release --output ./publish
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.0 
+        with:
+          name: backend
+          path: ./publish # or path/to/artifact
+          
