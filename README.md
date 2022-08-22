@@ -4,6 +4,9 @@ Web app template by the Microsoft Devices Software Experiences team.
 
 # Client (front-end)
 
+# Client (front-end)
+# Client (front-end)
+
 - [React](https://reactjs.org/docs/getting-started.html) with [Redux](https://redux.js.org/introduction/getting-started) and [TypeScript](https://www.typescriptlang.org/docs)
 - [Microsoft Fabric UI](https://developer.microsoft.com/en-us/fluentui#/get-started)
 - [NSwag](https://github.com/RicoSuter/NSwag) generated DTOs and client for back-end API
